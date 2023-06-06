@@ -1,0 +1,418 @@
+--hospitals table
+create table hospitals(
+    SERIAL_NUMBER INT Auto_increment ,
+    HOSPITALS text(100) not null,
+    SECTOR text(10) not null,
+    LOCATION text(250) not null,
+    CONTACT text(12) not null,
+    primary key(SERIAL_NUMBER)
+);
+
+insert into hospitals(HOSPITALS,SECTOR,LOCATION,CONTACT) values
+("Pakistan Institute of Medical Sciences (PIMS)","Government","G8/3, Islamabad","0519260500"),
+("Federal Government Services Hospital", "Government","PolyClinic, Service Road, G6/1","0519214965"),
+("Capital Hospital (CDA Hospital)","Government","Near Melody G6/3","0519260450"),
+("National Institute of Health","Government","Chak Shahzad","0519255110"),
+("Nuclear Oncology and RadioTherapy Institute(NORI)","Government","G-8/3","0519261313"),
+("Nescom Hospital","Government","Sector H-11","0519260620"),
+("KRL Hospital","Government","Sector G-9/1","0519106270"),
+("Shifa International Hospital","Private","Patras Bukhari Road, H-8/4","0518463000"),
+("Ali Medical Centre","Private","Kohistan Road","0518090200"),
+("Maroof International Hospital","Private","10th Ave, F-10 Markaz F-10/3 F-10","0512222920"),
+("Kulsum International Hospital","Private","Kulsum Plaza, 2020 Blue Area","0518446666"),
+("Integrated Health Services","Private","Plot 18, Chohan Plaza, G-8 Markaz","051111362867"),
+("HS Children's Medical Centre","Private"," Khumrial Centre, Street 22, G 8/4","03335330885"),
+("Medicsi","Private","First floor, Low Rise, Saudi Pak Towers, 61-A Jinnah Avenue, Blue Area، F 7/4","051111111125"),
+("Islamabad International Hospital & Research Center","Private","E-11/2, Main Double Road, D-12","0512304941"),
+("Amanat Eye Hospital","Private","Auqaf Building, Street No 61/62, Islamabad، F 7/4 F-7","0518439993"),
+("Maxhealth Hospital","Private","2-K Markaz Rd, G 8 Markaz, G-8 sector","0518094760"),
+("Family Health Hospital","Private","Street Number 30, I-10/4 I 10/4 I-10","0514446840"),
+("Medcity International hospital","Private","PMC Plaza, Ayub Market, near Islamabad Kacheri, F-8","0512817233"),
+("The Diabetes Centre","Private","Phulgran Stop, Near Toll Plaza. Islamabad – Murree Expressway, Barakahu","03345228819"),
+("PAF hospital","Semi-Government","Main Margalla Rd, E-9/1 E-9","0519563333"),
+("PNS Hafeez","Semi-Government","Address: E 8/1, sector E-8","05120063297"),
+("PAEC general hospital","Semi-Government","H-11/4","0514434521")
+;
+--Cinemas table
+create table cinemas(
+    A INT AUTO_INCREMENT,
+    CINEMAS TEXT(100) NOT NULL,
+    LOCATION TEXT(250) NOT NULL,
+    TICKET_PRICE TEXT(12) NOT NULL,
+    BOOKING_INFO TEXT(12) NOT NULL,
+    PRIMARY KEY(A)
+);
+INSERT INTO cinemas(CINEMAS,LOCATION,TICKET_PRICE,BOOKING_INFO) VALUES
+("The Centaurus Cineplex ","Centaurus Mall","Rs. 600 – Rs. 1500","051111626384"),
+("Raiha CineGold Plex","Bahria Town, Phase 7","Rs. 500 – Rs. 1000","0515706441"),
+("Cinepax World Trade Center","Dha Phase II","Rs. 600","051111246372"),
+("The Arena Islamabad ","Bahria Town, Phase 4","Rs. 800","05157319013"),
+("Jacaranda Family Club (JFC) Cineplex","Dha Phase II","Rs. 600","0512311001")
+;
+--Famous spots
+create table famous_spots(
+    B int auto_increment,
+    FAMOUS_SPOTS TEXT(100) NOT NULL,
+    LOCATION TEXT(250) NOT NULL,
+    TIMING TEXT(50) NOT NULL,
+    PRICE_FOR_ENTRY TEXT(20) not null,
+    PRIMARY KEY(B)
+);
+INSERT INTO famous_spots(FAMOUS_SPOTS,LOCATION,TIMING,PRICE_FOR_ENTRY) VALUES
+("Shah Faisal Mosque","Shah Faisal Avenue, E8 ","24 hours open","Free"),
+("Lok Virsa Museum","Garden Ave & Shakarparian Rd","Tue - Sun: 10am - 8pm (closed on Mon)"," 250 PKR "),
+("Daman-e-Koh Park","Daman-e-Koh Rd, E-7"," 7am - 10pm (daily)","Free"),
+("Pakistan Monument","Shakarparian Hills"," Tue - Sun: 10am - 8pm (closed on Mon)","20 PKR"),
+("Giga Mall","Main GT Road, Defense Housing Authority, DHA Phase II,","10am - 9pm","Free"),
+("Islamabad Zoo	"," Pir Sohawa Rd, Saidpur"," 9am - 7pm (daily)"," 30 PKR"),
+("Fatima Jinnah Park"," F-9	","5am - 10pm (daily)","Free"),
+("The Monal	"," 9KM Pir Sohawa Rd"," 9am - 12:30am (daily)","Free"),
+("Pakistan Museum of Natural History","Shakarparian National Park, Garden Ave","9:30am - 5:30pm (daily)","30 PKR "),
+("Shah Allah Ditta Caves"," Shah Allah Dita, Islamabad","24 hours (daily)","Free"),
+("Bruti","behind Bari Imam Shrine"," Fri - Wed: 6am - 6pm; Thu: 5am - 6pm","Free"),
+("Rawal Lake Bird Aviary","Lake View Park"," 10am - 8pm (daily)","120 PKR"),
+("Pakistan National Council of Arts","F-5/1 F-5"," Sun - Thu: 9am - 5pm (closed on Fri - Sat)"," 1,000 PKR"),
+("The Centaurus"," F8، 4 Jinnah Avenue","Sun - Thu: 11am - 11pm; Fri - Sat: 11am - 12am","Free"),
+("Pak China Friendship Center","Garden Ave & Shakarparian Rd","Varies","Varies"),
+("Rose and Jasmine Garden","Kashmir Highway"," 8am - 9pm (daily)","Free"),
+("Golra Sharif Railway Museum","Golra Railway Station, Golra Rd","24 hours daily","10 PKR"),
+("Hiking Track 5 Dara Janglan","Trail 5","5am - 7pm (daily)","Free"),
+("Bahria Enclave Zoo","Bahria Enclave","8am - 7pm (daily)","100 PKR "),
+("Lal Masjid","Masjid Rd, G-6/4 G 6/4 G-6","24 hours (daily)","Free"),
+("Japanese Children Park","Saidpur","8am - 11pm (daily)","Free"),
+("Sir Syed Memorial Museum","19 Ataturk Ave, G-5/1 G-5","Mon - Fri: 9am - 5pm (closed on Sat - Sun)","Free")
+;
+--Shopping malls
+create table shopping_malls(
+    C int auto_increment,
+    SHOPPING_MALLS text(100) not null,
+    LOCATION TEXT(250) NOT NULL,
+    TIMING TEXT(50) NOT NULL,
+    CONTACT TEXT(12) NOT NULL,
+    PRIMARY KEY (C)
+);
+INSERT INTO shopping_malls(SHOPPING_MALLS,LOCATION,TIMING,CONTACT) VALUES
+("The Centaurus Mall"," F8، 4 Jinnah Avenue","Sun - Thu: 11am - 11pm; Fri - Sat: 11am - 12am","0518483040"),
+("Safa Gold Mall","College  road F-7 Markaz","11am – 12am","0512656766"),
+("Giga Mall","Main GT Road, Defense Housing Authority, DHA Phase II","10am - 9pm","0518491040"),
+("Olympus Mall","F-11","11am – 1am","03328573972"),
+("Al-Janat Mall","G-9 Markaz","10am – 10pm","0518482296"),
+("Emporium Islamabad","F10 Markaz","11am – 11pm","0512167234"),
+("Amazon mall","Nh 5, sector a dha phase 2","11 am – 11 pm","03432555555")
+;
+--Restaurants
+create table restaurants(
+    D int auto_increment,
+    RESTAURANTS TEXT(100) NOT NULL,
+    LOCATION TEXT(250) NOT NULL,
+    AMBIANCE TEXT(10) NOT NULL,
+    PRIMARY KEY(D)
+);
+INSERT INTO restaurants(RESTAURANTS,LOCATION,AMBIANCE) VALUES
+("Chatta's","Plaza 1 N Street 14 Tariq Market F-10/2","Good"),
+("Dilli Darwaza","Plot no, 8 Street 33, F-8/1","Good"),
+("Khoka Khola","Beverly Centre, Jinnah Ave, F 6/1 Blue Area","Excellent"),
+("Des Pardes","Plaza 1 N, Street 14, Tariq Market، F-10/2","Good"),
+( "Melody Food Park","Street 5, G-6/3, Markaz G-6, Islamabad"	,"Average"),
+("Chikachino","F-7 Markaz"	,"Good"),
+("Bismillah Tikka and Chargha","Madina Market, Block 5, Street 21, F-8/2"	,"Good"),
+("Kyber Dodai","Super Market, School Rd, F-6 Markaz","Good"),
+("Tandoori","Khursheed Market، Street 30, F-10/1","Good"),
+("Hot n Chilli","F-10 Markaz F 10/3","Average"),
+("Qishmisch","Bhittai Rd, F-7 Markaz","Good"),
+("Usmania Restaurant","West Jinnah Ave, Block D G 6/2 Blue Area","Average"),
+("Salt' n Pepper","Plot No. 55, Shabbir Plaza, Blue Area، G 6/2","Average"),
+("Andaaz","Saidpur Village, Saidpur Road, Islamabad","Excellent"),
+("Haleem Ghar","Ginza Center, Ground Floor، Jinnah Ave, G 7/2 Blue Area","Average"),
+("Bar BQ Tonight","Sohrab Plaza, group floor, Block -32, Fazl-e-Haq Road, Embassy Rd, G 6/3 Blue Area","Average"),
+("The Monal","Pir Sohawa Rd, Islamabad"	,"Excellent"),
+("Savour Foods","Furtune Plaza, 72 E Jinnah Ave, G 7/2 Blue Area, Islamabad","Average"),
+("Khiva Revolving Restaurant","5th & 6th Floor, STS Mall Plaza, Civic Center, Phase 4 Bahria Town, Rawalpindi","Average"),
+(" Charsi Tikka","Saidpur Village, Saidpur Road, Islamabad","Average"),
+("Chilman","Ramzan Plaza, Mangla Rd, G-9 Markaz","Average"),
+("Tapas","Jahangir Market، Shop No.1-3, Street 5, Mangla Rd, G-9/2"	,"Good"),
+(" La Montana","Margalla Hills, 9 KMs، Pir Sohawa Rd","Good"),
+(" Rewayat","Al Hameed Mall, Shop no 16,17, G 11 Markaz","Good")
+;
+--Hostels
+create table hostels(
+    E int auto_increment,
+    HOSTELS TEXT(100) NOT NULL,
+    LOCATION TEXT(250) NOT NULL,
+    CONTACT TEXT(12) NOT NULL,
+    PRIMARY KEY(E)
+);
+insert into hostels(HOSTELS,LOCATION,CONTACT) VALUES
+("Fatima Tuz Zahra Group of Hostels","House no, 1461 street no 4, I-11/2 I 11/2 I-11","03040060020"),
+("Backpackers Hostel Islamabad","KHudadad Heights، Main Margalla Rd, Golra E-11","03159276449"),
+("Islamabad Hostel","House 421 Street 36, Sector I-8/2 I 8/2 I-8","03360016205"),
+("Originale Hostel","M634+H68, Road, Phase I Frash Town","0300950488"),
+("Khyber Inn","House 740 Street 64, G-9/4 G 9/4 G-9","03181819213"),
+("Executive Palace Guest House","F7 College Rd, F-7 Markaz F 7 Markaz F-7","03224443431"),
+("MARGALLA Hills Residency Islamabad E-11/3","House 170-A, Street 70, MPCHS E-11/3 MPCHS E 11/3 E-11","03495709104"),
+("Three Star Boys Hostel","Royal Avenue Lane, 10 Street No:3, Chatta Bakhtawar","0341 9199815"),
+("Hotel Apartment for rent","Phase 4, Civic Center Bahria Town Civic Center Bahria Town","03000027212"),
+("The Professional lodges","JWCC+X25, Street 5, 7 & 9 G 16/4 G 16","03015614493")
+;
+--Libraries
+create table libraries(
+    F int auto_increment,
+    LIBRARIES TEXT(100) NOT NULL,
+    LOCATION TEXT(250) NOT NULL,
+    CONTACT TEXT(12) NOT NULL,
+    PRIMARY KEY(F)
+);
+INSERT INTO libraries(LIBRARIES,LOCATION,CONTACT) VALUES
+("Islamabad Public Library","Plot#، 35 Service Rd E, H 9/4 H-9","0519265597"),
+("Islamabad Community Library","Street 57, Sector I-10/1 I 10/1 I-10","0514444515"),
+("Aiwan-e-Quaid Library","M2WG+J9P, F-9","(051) 9334350"),
+("Islamabad Community Library","P35C+6W8, Khushal Khan Khattak Rd, G 7/3 G-7","0519252477"),
+("National Library of Pakistan","P4G2+HMP, Constitution Ave, G-5","0519202549"),
+("CDA Public Library and Gym , F-11","MXPP+5Q6, Colonel Sher Khan Rd, F-11 Markaz F 11 Markaz F-11","03457636786"),
+("NUML Central Library","M28X+VVV, H-9/4 H 9/4 H-9","0519265100"),
+("Al Sadiq Library","G-9/2 G 9/2 G-9","0512851996"),
+("Dr. Muhammad Hamidullah Library (IRI Library)","P2JQ+2JF, E-7","0519261761")
+;
+--Universities
+create table universities(
+    G int auto_increment,
+    UNIVERSITIES TEXT(100) NOT NULL,
+    LOCATION TEXT(250) NOT NULL,
+    CONTACT TEXT(12) NOT NULL,
+    PRIMARY KEY(G)
+);
+INSERT INTO universities(UNIVERSITIES,LOCATION,CONTACT) VALUES
+("International Islamic University Islamabad (IIUI)","H10","0519258070"),
+("COMSATS University Islamabad","M524+PJP, Park Rd","0519247000"),
+("Quaid-i-Azam University","Islamabad Capital Territory 15320","05190644050"),
+("Air University","Service Road E-9 / E-8","0519262557"),
+("Bahria University","Shangrilla Rd, E-8/1 E 8/1 E-8","0519260002"),
+("National University Of Modern Languages","4 Khayaban-e-Johar, H 9/4 H-9","0519265100"),
+("National University of Sciences & Technology (NUST)","Scholars Ave, H-12","051111116878"),
+("Pakistan Institute of Engineering & Applied Sciences (PIEAS)","Lehtrar Rd, Nilore","051111174327"),
+("Riphah International University","Peshawar Rd, near Hajj Complex،، I-14","051111747424"),
+("FAST National University of Computer and Emerging Sciences, Islamabad Campus","FAST University, 3 A.K. Brohi Road, H-11/4 H 11/4 H-11","051111128128"),
+("Allama Iqbal Open University, Islamabad Pakistan","2 Ashfaq Ahmed Rd, H-8/2 H 8/2 H-8","051111112468"),
+("Capital University of Science & Technology (CUST)"," Islamabad Expressway, Kahuta، Road Zone-V Sihala","051111555666"),
+("Federal Urdu University of Arts, Sciences & Technology, Islamabad","Kuri Model Village, Mozah Mohrian, 5B, near Bahria Enclave Road","0519252860"),
+("Shifa Tameer-e-Millat University","Shifa International Hospitals Ltd، Gate No. 1، 4 Pitras Bukhari Rd, H 8/4 H-8","0518438060")
+;
+--Atm
+create table atm(
+    H int auto_increment,
+    ATMS text(100) not null,
+    LOCATION TEXT(250) NOT NULL,
+    TIMINGS TEXT(50) NOT NULL,
+    PRIMARY KEY(H)
+);
+insert into atm(ATMS,LOCATION,TIMINGS) VALUES
+("Faysal Bank ATM"," I-8 Markaz","Open 24 hours"),
+("National Bank ATM","NUST College of Electrical and Mechanical Engineering","Open 24 hours"),
+("United Bank Limited Branch ATM","G9, 4 Street 55","Open 24 hours"),
+("Habib Bank Limited ATM","C2, NUST, Concordia 2, H-12","Open 24 hours"),
+("MCB ATM","F-11 Markaz","Open 24 hours"),
+("ABL ATM"," G-13/1 ","Open 24 hours"),
+("MCB ATM","11D Jinnah Ave, Block F G 7/3 Blue Area","Open 24 hours"),
+("United Bank Limited ATM","Islamabad Arcade, G-11 Markaz","Open 24 hours"),
+("Allied Bank ATM"," G-13/1","Open 24 hours"),
+("ATM Of Faysal Bank","Faysal Bank, 11D Jinnah Avnue, G 6/2 Blue Area","Open 24 hours"),
+("Meezan Bank ATM"," G-13 Markaz","Open 24 hours"),
+("Askari Bank ATM"," G-10 Markaz","Open 24 hours"),
+("MCB ATM","28 Jinnah Ave, Block A G 6/3 Blue Area","Open 24 hours"),
+("Allied ATM","G-9 Markaz","Open 24 hours"),
+("Askari Bank ATM"," G-8 Markaz ","Open 24 hours"),
+("NBP ATM","Korang Road, I-10 Markaz","Open 24 hours")
+;
+--Hotels
+create table hotels(
+    I int auto_increment,
+    HOTELS TEXT(100) NOT NULL,
+    LOCATION TEXT(250) NOT NULL,
+    PRICE TEXT(50) NOT NULL,
+    RATING TEXT(6) NOT NULL,
+    CONTACT TEXT(12) NOT NULL,
+    Primary key (I)
+    
+);
+INSERT INTO hotels(HOTELS,LOCATION,PRICE,RATING,CONTACT) VALUES
+("islamabad Serena Hotel","Khayaban-e-Suharwardy, G-5/1","PKR 52,179","5 star","051111133133"),
+("Reina Boutique Hotel","G6/3","PKR 8,740","3 star","03176215215"),
+("Islamabad Regalia Hotel","G/6","PKR 20,090","3 star"," 03335562638"),
+("Ramada by Wyndham Islamabad","9 km from Shah Faisal Mosque","PKR 27,000","4 star","051111379379"),
+("Hotel Crown Plaza Islamabad","Jinnah Avenue, Blue Area","PKR 20,000","4 star","0512347080"),
+("HOTEL AL-HABIB","Whole Sale Market Markaz G-7","PKR 2,200","2 star","0512204881"),
+("Envoy Continental Hotel","Fazal-Ul-Haq Road, Blue Area","PKR 17,500","4 star","03305959104"),
+("Roomy Signature Hotel, Islamabad","F-6 Markaz","PKR 24,450","4.7 star","03335562638"),
+("Hotel Margala","M-2 islamabad near convention centre","PKR 18,000","3 star","051111901901"),
+("Islamabad Hotel","Main Civic Centre, Municipal Rd, G-6 Markaz","PKR 32,670","4.1 star","0512827311"),
+("Marriott Hotel"," Agha Khan Rd, F-5/1 F-5","Rs. 49,921","4.5 star","0512826121")
+;
+--Schools and colleges
+create table schools(
+    J INT AUTO_INCREMENT,
+    SCHOOLS_AND_COLLEGES TEXT(100) NOT NULL,
+    LOCATION TEXT(250) NOT  NULL,
+    CONTACT TEXT(12) NOT NULL,
+    PRIMARY KEY(J)
+);
+INSERT INTO schools(SCHOOLS_AND_COLLEGES,LOCATION,CONTACT) VALUES
+("International Grammar School & College","MXJW+V39, Street 58, F-11/4 F 11/4 F-11","0512103520"),
+("The Smart School Capital Campus","House # 1، Street 128, G-13/4 G 13/4 G-13","03348501447"),
+("TQM Model School","JXR8+5QG، سلیمان ٹاون H-13","03215292859"),
+("International School of Islamabad"," M26R+VG3، Johar Road، Khayaban-e-Johar, Sector H-9/1 H 9/1 H-9","0514434950"),
+("One World Schools","Street 165, G-12","03365154515"),
+("SLS Montessori & School","M294+3FP, Street 124, G-11/4 G 11/4 G-11","0512301603"),
+("Islamabad Science School & College","M237+WRF, H-11/4 H 11/4 H-11","0514866161"),
+("Allied Schools G-13 Isb. Campus","JXW3+WR2, Service Rd W, G-13/2 G 13/2 G-13","03315559950"),
+("Roots International Schools - Winchester campus","Street 787, G-12","0512154790"),
+("EMS High School","33 Service Rd E, F-11/4 F 11/4 F-11","0514866125"),
+("Super Nova School","16 Nazim-ud-din Rd, F-8/1 F 8/1 F-8","0512255005"),
+("Sehberg School System","69 Sachal Sarmast Rd, G-11/2 G 11/2 G-11","0512363522"),
+("The Science School Islamabad","PTCL NOC, 6 Street 6, Sector H-9/1 H 9/1 H-9"," 0514865465"),
+("Foundation Public School","10th Ave N, G 10/4 G-10","03440450786"),
+("Imperial International School & College","316 Service Rd North (VR-30), F-10/3 F 10/3 F-10","(0512103724"),
+("Bright Model School","M332+FR5, Street 18, I-9/1 I 9/1 I-9","0514433530"),
+("Schola Nova","5 Street 8, F-8/3 F 8/3 F-8","0512855003"),
+("AlHuda International School","7 AK Brohi Rd, H-11/4 MPCHS H 11/4 H-11","0514866124"),
+("Khaldunia High School","Plot 2، s Street 94, G-11/3 G 11/3 G-11","0512223620"),
+("Super Nova School","16 Nazim-ud-din Rd, F-8/1 F 8/1 F-8","0512255005"),
+("The Knowledge City School","M2H7+8GG, G-10/2 G 10/2 G-10","0518311791"),
+("Royal International School","MX8W+95X, Street 176, G-11/1 G 11/1 G-11","0512300212"),
+("International Islamic University Islamabad Schools G-10 Campus","43 Bela Rd, G-10/1 G 10/1 G-10","0512355542"),
+("Oxbridge Islamic Grammar School","House 6 &، 7 Major Rd, F-11/3 F 11/3 F-11","0512225155"),
+("AlHuda International School","7 AK Brohi Rd, H-11/4 MPCHS H 11/4 H-11","0514866124")
+;
+--police station
+create table police(
+    K int auto_increment,
+    POLICE_STATIONS TEXT(100) NOT NULL,
+    LOCATION TEXT(250) NOT NULL,
+    CONTACT TEXT(12) NOT NULL,
+    PRIMARY KEY(K) 
+);
+INSERT INTO police(POLICE_STATIONS,LOCATION,CONTACT) VALUES
+("Model Police Station Ramna","MX8W+MJJ, Shabbir Sharif Road, G-11 Markaz G 11 Markaz G-11","0519330189"),
+("Police Station Golra Sharif","MXRC+H4P, Golra Rd, Golra E 11/1 E-11","0519267099"),
+("Model Police Station Shalimar","MXVX+GQ4, Street 8, F-10/2 F 10/3 F-10","0519266885"),
+("Police Station G-9 Markaz","M2PM+MVR, G-9 Markaz G 9 Markaz G-9","0519334091"),
+("Women Police Station","P349+2W2, G-7 Markaz G 7 Markaz G-7","0519252517"),
+("Model Police Station Kohsar","Jinnah Super Market، 13-K Bhittai Rd, F-7 Markaz F 7 Markaz F-7","0519102499"),
+("Islamabad Traffic Police Headquarters","P24J+FQQ, Service Rd W, F 8/1 F-8","05192619923"),
+("Police Station Sabzi Mandi","J2QG+36Q, Sabzi Mandi Rd, I-11/4 I 11/4 I-11","0519258840"),
+("Police Station Shams Colony Islamabad","JXHC+C4J, H-13","0519334499"),
+("Tarnol Police Station","JWW7+JQQ, Tarnol, F 15 Jammu Kashmir Housing Scheme","0512295122"),
+("Rescue 15","M3X5+VP9, Service Road East, G-8/4 G 8/4 G-8","0519107612"),
+("Margalla Police Station","P25R+J2P, Kaghan Rd, F-8 Markaz F 8 Markaz F-8","0519261510"),
+("Monthly Police Vs Crime","Babar Plaza, Office 1, Ground Floor, Plot G-1-A, Sohni Rd, I-10-1 Markaz, I-10, I 10 Markaz I-10","0514444786"),
+("Aabpara Police Station","6 Municipal Rd, G-6 Markaz G 6 Markaz G-6","0519204830"),
+("National Police Bureau","Municipal Rd, near Lal Masjid، G-6/1 G 6/1 G-6","0519213066"),
+("Secretariat Police Station","P4G4+WRX, Isfahani Rd, Diplomatic Enclave","0519209132"),
+("Police Headquarters ICT Police Lines Islamabad","M236+4FM, AK Brohi Rd, H-11/1 H 11/1 H-11","0514440037")
+;
+--transport
+create table transport(
+    L INT AUTO_INCREMENT,
+    BUSES TEXT(100) NOT NULL,
+    STATIONS TEXT(250) NOT NULL,
+    PRIMARY KEY(L)
+);
+INSERT INTO transport(BUSES, STATIONS) VALUES
+("Katchery Metro Bus Station","Jinnah Ave, G 8/2 G-8"),
+("Chamman Metro Bus Station","Chamman Metro Bus Station"),
+("Metro Station I-8/I-9","I 8/2 I-8"),
+("Kashmir Highway Station","Kashmir Highway، 9th Avenue، Islamabad"),
+("Faiz Ahmed Faiz Metro Bus Station","9th Ave, H 8/1 H-8"),
+("PIMS Metro Bus Station","Jinnah Ave, G 8/3 G-8"),
+("Khayaban-e-Johar Metro Bus Station","H 8/1 H-8"),
+("7th Avenue Metro Bus Station","F-8 Markaz G 7/3 F-8"),
+("Ibn-e-Sina","9th Ave, G 9/3 G-9"),
+("Chaman Metro Station Bridge","M2RV+57J, 9th Ave, G-8/2 G 8/1 G-8"),
+("G-12 Metro Station","MX4V+H64, G-12"),
+("Stock Exchange Metrobus Station","109 Jinnah Ave, G 7/2 Blue Area"),
+("IJP Metro Bus Station"," I.J.P. Road, I 8/1 I-8"),
+("Shaheed-e-Millat Metro Bus Station","Jinnah Ave, G 6/2 Blue Area"),
+("Parade Ground Metro Bus Station","Jinnah Ave, G 6/3 Blue Area"),
+("Metro Secretariat Station","P3PR+2X2, Rawalpindi - Islamabad Metro Bus Service, F-5"),
+("Potohar Metro Bus Station","9th Ave, I 8/1 I-8"),
+("High Court Metrobus Station","1 Service Road South, G-10/1 G-10"),
+("IIUI Metro Bus Station","Mudasar Hanif, Sabri Road, Sector H8 H-10"),
+("NUST/G-13 West Metro Bus Station","JXXJ+RP6, Srinagar Hwy, H-12"),
+("Faizabad Metro Station","M36M+G4F, Faizabad Rawalpindi, Islamabad, Punjab"),
+("H-9/G-9 Metrobus Station","M2GM+WW6, H-9"),
+("Metro Bus Depot","M2HR+6RW, Peshawar Mor, Srinagar Hwy, H-9"),
+("Golra Metrobus Station","1, G 13/1 G-13"),
+("H-8 Metro Bus Stop","Disaster Management & Logistic Center, H 8/2 H-8"),
+("N-5 Metrobus Station","JXM2+XG2"),
+("Police Foundation Metro Station South Parking","M264+RM, H-11")
+;
+
+
+--admin
+create table admin(
+    M int auto_increment,
+    FIRST_NAME TEXT(30) NOT NULL,
+    LAST_NAME TEXT(30) NOT NULL,
+    USERNAME VARCHAR(30) NOT NULL Unique,
+    PASSWORDS TEXT(100) NOT NULL,
+    PRIMARY KEY(M)
+);
+INSERT INTO admin(FIRST_NAME,LAST_NAME,USERNAME,PASSWORDS) VALUES
+("misbah","juwayriyyah","misbah","happy1"),
+("muhammad","saadan","saadan","happy2"),
+("maryam","naeem","maryam","happy3")
+;
+--student
+create table student(
+    N int auto_increment,
+    FIRST_NAME TEXT(30) NOT NULL,
+    LAST_NAME TEXT(30) NOT NULL,
+    USERNAME VARCHAR(30) NOT NULL Unique,
+    PASSWORDS TEXT(100) NOT NULL,
+    PHONE TEXT(12) NOT NULL,
+    PRIMARY KEY(N)
+);
+
+
+
+--tourist
+create table tourist(
+    O int auto_increment,
+    FIRST_NAME TEXT(30) NOT NULL,
+    LAST_NAME TEXT(30) NOT NULL,
+    USERNAME VARCHAR(30) NOT NULL Unique,
+    PASSWORDS TEXT(100) NOT NULL,
+    PHONE TEXT(12) NOT NULL,
+    PRIMARY KEY(O)
+);
+--airport
+create table airport(
+    P int auto_increment,
+    AIRPORT TEXT(100) NOT NULL,
+    LOCATION TEXT(250) NOT NULL,
+    CONTACT TEXT(12) NOT NULL,
+    PRIMARY KEY(P)
+);
+INSERT INTO airport(AIRPORT,LOCATION,CONTACT) values 
+("lslamabad International Airport","HR4M+GJ7 New Islamabad, Airport Road, Islamabad","05195550211")
+;
+--drop tables airport,admin,student,
+--tourist,hospitals,cinemas,shopping_malls,hotels,hostels,famous_spots,police,restaurants,
+--universities,schools,libraries,atm,transport;
+--drop tables tourist,student;
+--
+create table records_stu(
+    Q int auto_increment,
+    USERNAME text(100),
+    primary key(Q)
+);
+create table records_tour(
+    R int auto_increment,
+    USERNAME text(100),
+    primary key(R)
+);
+select * from tourist;
+--select * from hospitals;
+--select * from records_stu;
+--select * from records_tour;
+
+--delete from hospitals where SERIAL_NUMBER=24 OR SERIAL_NUMBER=25;
